@@ -30,20 +30,40 @@ public class Start {
     WebElement el5 = wd.findElement(By.linkText("Log in"));
 
     //css
-    WebElement elc1 = wd.findElement(By.cssSelector("#skip-to-content"));
-    WebElement elc2 = wd.findElement(By.cssSelector(".visually-hidden"));
-    WebElement elc3 = wd.findElement(By.cssSelector("[data-testid='smallnav']"));
+    WebElement elc1 = wd.findElement(By.cssSelector("#skip-to-content"));//id
+    WebElement elc2 = wd.findElement(By.cssSelector(".visually-hidden"));//class
+    WebElement elc3 = wd.findElement(By.cssSelector("[data-testid='smallnav']"));// [a='f']
+
+    //xpath
+    WebElement elx1= wd.findElement(By.xpath("//*[@id='skip-to-content']")); //id
+    WebElement elx2= wd.findElement(By.xpath("//*[@class='visually-hidden']"));//class
+    WebElement elx3= wd.findElement(By.xpath("//*[@data-testid='smallnav']"));// [a='g']
+    WebElement loginTab = wd.findElement(By.xpath("//a[@href='/login']"));//+tagname
+
+
 
 
     // for log in
     WebElement li1 = wd.findElement(By.cssSelector("[href='/login']"));
+    WebElement lix1 = wd.findElement(By.xpath("//a[@href='/login']"));
+
     WebElement li2 = wd.findElement(By.cssSelector("#user"));
+    WebElement lix2 = wd.findElement(By.xpath("//*[@id='user']"));
+
     WebElement li3 = wd.findElement(By.cssSelector("#login"));
+    WebElement lix3 = wd.findElement(By.xpath("//*[@id='login']"));
+
     WebElement li4 = wd.findElement(By.cssSelector("#password"));
+    WebElement lix4 = wd.findElement(By.xpath("//*[@id='password']"));
+
     WebElement li5 = wd.findElement(By.cssSelector("#login-submit"));
+    WebElement lix5 = wd.findElement(By.xpath("//*[@id='login-submit']"));
 
     WebElement li6 = wd.findElement(By.cssSelector("[data-test-id='header-member-menu-button']"));
+    WebElement lix6 = wd.findElement(By.xpath("//*[@data-test-id='header-member-menu-button']"));
+
     WebElement li7 = wd.findElement(By.cssSelector(".m2N684FcksCyfT"));
+    WebElement lix7 = wd.findElement(By.xpath("//*[@class='m2N684FcksCyfT']"));
 
     //log out
     WebElement li8 = wd.findElement(By.cssSelector("[data-test-id='header-member-menu-button']"));
@@ -54,5 +74,4 @@ public class Start {
     WebElement li11= wd.findElement(By.cssSelector("[href='/home']"));
     WebElement li12= wd.findElement(By.cssSelector("[data-testid='logo_link']"));
     WebElement li13= wd.findElement(By.cssSelector("[data-testid='bignav-tab']"));
-
 }
