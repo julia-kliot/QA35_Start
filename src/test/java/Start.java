@@ -74,4 +74,18 @@ public class Start {
     WebElement li11= wd.findElement(By.cssSelector("[href='/home']"));
     WebElement li12= wd.findElement(By.cssSelector("[data-testid='logo_link']"));
     WebElement li13= wd.findElement(By.cssSelector("[data-testid='bignav-tab']"));
+
+    //starts/contains-ends(css)
+    WebElement el557 = wd.findElement(By.cssSelector("[aria-label='Trello']"));
+    WebElement el559 = wd.findElement(By.cssSelector("[aria-label $='llo']"));//ends
+    WebElement el558 = wd.findElement(By.cssSelector("[aria-label ^='Tr']")); //starts
+    WebElement el57 = wd.findElement(By.cssSelector("[aria-label *='rell']")); //contains
+
+    //starts/contains-ends(xpath)
+    WebElement elxp1 = wd. findElement(By.xpath("//*[@aria-label='Trello']"));
+    WebElement elxp2 = wd.findElement(By.xpath("//*[contains(@aria-label,'rel')]"));//contains
+    WebElement elxp3 = wd.findElement(By.xpath("//*[starts-with(@aria-label,'Tr')]"));//
+
+    //div[@class='first' and @class='list']
+
 }
